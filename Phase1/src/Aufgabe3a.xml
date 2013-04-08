@@ -1,20 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<? xml version="1.0" encoding="UTF-8"?>
 <RezeptSammlung>
 <Beschreibung>Meine Rezeptsammlung</Beschreibung>
+
+    
 <Rezept id="1"/>
+    <Fotos>
+            <Foto id="1" width="200" height="100" src="kuchen.jpg">Kuchen mit Schokoglasur</Foto>
+            <Foto id="2" width="200" height="100" src="kuchen2.jpg">Kuchen ohne Schokoglasur</Foto>
+            <Foto id="3" width="200" height="100" src="kuchen3.jpg">Teig</Foto>
+            
+    </Fotos>
+    
     <Rezeptname>Lenchen’s Schokoladenkuchen</Rezeptname>
     <Anmerkungen>
     Arbeitszeit= 1 Stunde, Schwierigkeitsgrad= normal
     </Anmerkungen>
     
     <Zutaten>
-        <Zutat name="Butter" Menge="200" Einheit="Gramm (g)"/>
-        <Zutat name="Zucker" Menge="200" Einheit="Gramm (g)"/>
-        <Zutat name="Schokolade" Menge="200" Einheit="Gramm (g)"/>
-        <Zutat name="Mehl" Menge="150" Einheit="Gramm (g)"/>
-        <Zutat name="Backpulver" Menge="0,5" Einheit="Teelöffel"/>
-        <Zutat name="Vanillezucker" Menge="1" Einheit="Päkchen"/>
+        
+        <Zutat Menge="200" Einheit="Gramm (g)">Butter</Zutat>
+        <Zutat Menge="200" Einheit="Gramm (g)">Zucker</Zutat>
+        <Zutat name="Schokolade" Menge="200" Einheit="Gramm (g)">Schokolade</Zutat>
+        <Zutat name="Mehl" Menge="150" Einheit="Gramm (g)">Mehl</Zutat>
+        <Zutat name="Backpulver" Menge="0,5" Einheit="Teelöffel">Backpulver</Zutat>
+        <Zutat name="Vanillezucker" Menge="1" Einheit="Päkchen">Vanillezucker</Zutat>
         <Zutat name="Eier" Menge="4" Einheit="Stück"/>
     </Zutaten>
     
