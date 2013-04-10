@@ -1,0 +1,44 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<participants>  <!--Root Wurzel-->
+    
+    <description>Member-List</description> 
+    
+    <!--Beginn einer Gruppe-->
+    <group id="1">
+    <name>Name der Gruppe</name>
+        
+    <!--Beginn eines Leaders innerhalb dieser Gruppe-->    
+    <leader>
+        <firstname>David</firstname>  
+        <lastname>Petersen</lastname>
+        <email>bla@muster.com</email> 
+        <bdate>
+          <day>DD</day>
+          <month>MM</month>  
+          <year>YYYY</year>    
+        </bdate>
+        <experience>Profi</experience>
+        <drums>vorhanden</drums>
+        <notes>Wichtig ist, dass wir einen Stellplatz mit Tageslicht bekommen</notes>    
+    </leader>
+        
+    <!--Beginn eines "normalen Mitglieds" innerhalb dieser Gruppe-->    
+    <participant>
+        <firstname>David</firstname>  
+        <lastname>Petersen</lastname>
+        <email>bla@muster.com</email> 
+        <bdate>
+            <day>DD</day>
+            <month>MM</month>  
+            <year>YYYY</year>    
+        </bdate>   
+        <experience>Profi</experience>
+        <drums>vorhanden</drums>
+        <notes>Wichtig ist, dass wir einen Stellplatz mit Tageslicht bekommen</notes>    
+    </participant>    
+        
+    </group>
+
+
+</participants>
+
