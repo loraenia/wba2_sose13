@@ -52,7 +52,7 @@ public class main {
 		JAXBContext jc = JAXBContext.newInstance("generated_laura");
 		Unmarshaller unmarshaller = jc.createUnmarshaller();
 		RezeptSammlung rs = (RezeptSammlung) unmarshaller.unmarshal(new File(
-				"src/3d.xml"));
+				"src/AUfgabe3d.xml"));
 
 		// Allgemeine Angaben zum Rezept
 		System.out.println("Beschreibung des Kochbuches: " + "\r\n"
@@ -73,11 +73,7 @@ public class main {
 
 				// Ausgabe der Zutaten!
 				System.out.println("\r\n" + "Zutaten:");
-				for (int j = 0; j < r.getZutaten().getZutat().size(); j++) { // solange
-																				// bis
-																				// es
-																				// Zutaten
-																				// gibt
+				for (int j = 0; j < r.getZutaten().getZutat().size(); j++) { // solange wie es Zutaten gibt
 					Zutat z = (Zutat) r.getZutaten().getZutat().get(j);
 					System.out.println("" + z.getContent() + ": "
 							+ z.getMenge() + " " + z.getEinheit());
@@ -85,25 +81,10 @@ public class main {
 
 				// Ausgabe der Zubereitung
 				System.out.println("\r\n" + "Zubereitung:");
-				for (int k = 0; k < r.getZubereitung().getStep().size(); k++) { // solange
-																				// wie
-																				// es
-																				// steps
-																				// gibt.
+				for (int k = 0; k < r.getZubereitung().getStep().size(); k++) { // solange wie es steps gibt
 					Step s = (Step) r.getZubereitung().getStep().get(k);
 					System.out.println(s.getContent());
 				}
-
-				// Ausgabe der Kommentare
-//				System.out.println("\r\n" + "Kommentare:");
-//				if (r.getKommentar().equals(null))
-//					System.out.println("Es gibt moch keine Kommentare");
-//				else
-//					for (int l = 0; l < r.getKommentar().size(); l++) {
-//						System.out.println("Kommmentar"
-//								+ r.getKommentar().get(l).getIdKommentar()
-//								+ ": " + r.getKommentar().get(l).getContent());
-//					}
 
 			}// Beendung der If-Bedingung
 		}// Beendung der for-Schleife
@@ -111,9 +92,10 @@ public class main {
 
 	public static void kommentar() throws Exception {
 
+		//Vorgabe 
 		JAXBContext jc = JAXBContext.newInstance("generated_laura");
 		Unmarshaller unmarshaller = jc.createUnmarshaller();
-		RezeptSammlung rs = (RezeptSammlung) unmarshaller.unmarshal(new File("src/3d.xml"));
+		RezeptSammlung rs = (RezeptSammlung) unmarshaller.unmarshal(new File("src/Aufgabe3d.xml"));
 		Rezept r;
 		
 		Scanner sc = new Scanner(System.in);
@@ -123,16 +105,15 @@ public class main {
 		Kommentar kommentar = new Kommentar();
 		BigInteger kommentarIndexBigInteger;
 
-		System.out.println("Zu welchem bla: ");
-		System.out.println("Rezept und Nummer: ");
+		System.out.println("Zu welchem Rezpet wollen Sie ein Kommentar verfassen? Geben Sie bitte die Rezeptnummer ein: ");
+		
+		//Ausgabe der Rezeptnamen mit Nummern - Zur EingabeHilfe fŸr den Nutzer
 		for (int i = 0; i < rs.getRezept().size(); i++) {
-
 			r = (Rezept) rs.getRezept().get(i);
 			System.out.println(r.getIdRezept() +" " + r.getRezeptname());
 
 		}
-
-		
+		//Einlesen der Eingabe
 		RezeptAuswahl = sc.nextInt();
 		sc.nextLine();
 
@@ -149,21 +130,18 @@ public class main {
 		System.out.println("Schreiben Sie ein Kommentar: ");
 		kommentarString = sc.nextLine();
 		
+		
 		kommentar.setContent(kommentarString);
 		kommentar.setIdKommentar(kommentarIndexBigInteger);
 		rs.getRezept().get(RezeptAuswahl-1).getKommentare().getKommentar().add(kommentar);
 
-		//EinfŸgen in die XML
+		//EinfŸgen in die XML - marshallen
 		Marshaller marshaller = jc.createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		marshaller.marshal(rs, (new File("src/generated_laura/3d.xml")));
 		
-//
-//		//Jetzt wieder Marshallen
-//        Marshaller marshaller = jc.createMarshaller();
-//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-//
-//        //Output: Aufgabe3d.xml, 'System.out' fÙr manual-Debugging verwenden
-//        marshaller.marshal(rs, new File("Aufgabe 4/aufgabe4_src/Aufgabe3d.xml"));
+		//Output
+		marshaller.marshal(rs, (new File("src/Aufgabe3d.xml")));
+		
+
 	}
 }
