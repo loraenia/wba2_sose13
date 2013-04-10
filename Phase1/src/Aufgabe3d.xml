@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RezeptSammlung>
+    <Beschreibung>
+    Bei diesem Kochbuch handelt es sich ausschließlich um die Rezepte
+    mehrerer Großmütter, welche sich zusammengeschlossen haben um ein Rezeptbuch
+    für junge Menschen zu gestalten. </Beschreibung>
+    <Rezept id_rezept="1">
+        <Rezeptname>Mein Dessert</Rezeptname>
+        <Anmerkungen>Ist nicht so einfach wie man denkt - Aber es ist sehr lecker</Anmerkungen>
+        <Zutaten>
+            <Zutat Einheit="Packung" Menge="1">Mascarpone</Zutat>
+            <Zutat Einheit="Packung" Menge="1">Joghurt</Zutat>
+            <Zutat Einheit="Brise" Menge="1">Brauner Zucker</Zutat>
+            <Zutat Einheit="Packung" Menge="1">Tiefkühl Himbeeren</Zutat>
+        </Zutaten>
+        <Zubereitung>
+            <Step id_step="1">Alles mischen und fertsch</Step>
+        </Zubereitung>
+        <Brennwert>Will man nicht wissen (MASCARPONE!)</Brennwert>
+        <Kommentare>
+            <Kommentar id_kommentar="1">Das kann ja jedes Kind</Kommentar>
+            <Kommentar id_kommentar="2">Es schmeckt auch mit Erdbeeren sehr gut.</Kommentar>
+            <Kommentar id_kommentar="3">Am besten muss es ein paar Stunden in den Kühlschrank, 
+                dann wird der Zucker oben drauf schön hart.</Kommentar>
+        </Kommentare>
+    </Rezept>
+    <Rezept id_rezept="2">
+        <Rezeptname>Davids Apfelkuchen</Rezeptname>
+        <Anmerkungen>Für David. </Anmerkungen>
+        <Zutaten>
+            <Zutat Einheit="Stück" Menge="5">Äpfel</Zutat>
+        </Zutaten>
+        <Zubereitung>
+            <Step id_step="1">Alles verrühren und schon ist der Kuchen perfekt!</Step>
+        </Zubereitung>
+        <Brennwert>207</Brennwert>
+        <Kommentare>
+            <Kommentar id_kommentar="1">Ich find Apfelkuchen an sich nicht sehr lecker.</Kommentar>
+            <Kommentar id_kommentar="2">Dies ist mein Kommentar zum testen! Hoffentlich klappts</Kommentar>
+        </Kommentare>
+    </Rezept>
+</RezeptSammlung>

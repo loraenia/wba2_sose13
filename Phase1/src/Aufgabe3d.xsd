@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!--Simple Types-->
+    <xs:element name="Beschreibung" type="xs:string"/>
+    <xs:element name="Rezeptname" type="xs:string"/>
+    <xs:element name="Anmerkungen" type="xs:string"/>
+    <xs:element name="Brennwert" type="xs:string"/> 
+
+    <!--Attribute -->
+    <xs:attribute name="id_rezept" type="xs:integer"/> 
+    <xs:attribute name="Menge" type="xs:decimal"/> 
+    <xs:attribute name="Einheit" type="xs:string"/> 
+    <xs:attribute name="id_step" type="xs:integer"/> 
+    <xs:attribute name="id_kommentar" type="xs:integer"/>
+ 
+    <!--Complex Types-->
+    <xs:element name="Zutat">
+        <xs:complexType  mixed="true" >
+            <xs:attribute ref="Einheit" use="required"/>
+            <xs:attribute ref="Menge" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="Step">
+        <xs:complexType mixed="true">
+               <xs:attribute ref="id_step" use="required"/> 
+        </xs:complexType>  
+    </xs:element>
+    
+    <xs:element name="Zubereitung">
+        <xs:complexType>
+            <xs:sequence> <!-- Abarbeitung in bestimmter Reihnefolge -->
+                <xs:element ref="Step" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="Zutaten">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Zutat" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    
+    <xs:element name="Rezept">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Rezeptname"/>
+                <xs:element ref="Anmerkungen"/>
+                <xs:element ref="Zutaten"/>
+                <xs:element ref="Zubereitung"/>
+                <xs:element ref="Brennwert"/>  
+                <xs:element ref="Kommentare"/>
+            </xs:sequence>
+            <xs:attribute ref="id_rezept" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="RezeptSammlung">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Beschreibung"/>
+                <xs:element ref="Rezept" maxOccurs="unbounded" minOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="Kommentare">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Kommentar" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+     
+    <xs:element name="Kommentar">
+        <xs:complexType  mixed="true" >
+            <xs:attribute ref="id_kommentar" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>    

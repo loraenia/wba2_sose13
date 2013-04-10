@@ -3,13 +3,7 @@
 <Beschreibung>Meine Rezeptsammlung</Beschreibung>
 
     
-<Rezept id="1"/>
-    <Fotos>
-            <Foto id="1" width="200" height="100" src="kuchen.jpg">Kuchen mit Schokoglasur</Foto>
-            <Foto id="2" width="200" height="100" src="kuchen2.jpg">Kuchen ohne Schokoglasur</Foto>
-            <Foto id="3" width="200" height="100" src="kuchen3.jpg">Teig</Foto>
-            
-    </Fotos>
+<Rezept id_rezept="1"/>
     
     <Rezeptname>Lenchen’s Schokoladenkuchen</Rezeptname>
     <Anmerkungen>
@@ -20,22 +14,22 @@
         
         <Zutat Menge="200" Einheit="Gramm (g)">Butter</Zutat>
         <Zutat Menge="200" Einheit="Gramm (g)">Zucker</Zutat>
-        <Zutat name="Schokolade" Menge="200" Einheit="Gramm (g)">Schokolade</Zutat>
-        <Zutat name="Mehl" Menge="150" Einheit="Gramm (g)">Mehl</Zutat>
-        <Zutat name="Backpulver" Menge="0,5" Einheit="Teelöffel">Backpulver</Zutat>
-        <Zutat name="Vanillezucker" Menge="1" Einheit="Päkchen">Vanillezucker</Zutat>
-        <Zutat name="Eier" Menge="4" Einheit="Stück"/>
+        <Zutat Menge="200" Einheit="Gramm (g)">Schokolade</Zutat>
+        <Zutat Menge="150" Einheit="Gramm (g)">Mehl</Zutat>
+        <Zutat Menge="0,5" Einheit="Teelöffel">Backpulver</Zutat>
+        <Zutat Menge="1" Einheit="Päkchen">Vanillezucker</Zutat>
+        <Zutat Menge="4" Einheit="Stück">Eier</Zutat>
     </Zutaten>
     
     <Zubereitung>
-        <Step1>Butter und Schokolade im Wasserbad schmelzen.</Step1>
-        <Step2>Eier trennen.</Step2>
-        <Step3>Eiweiß steif schlagen.</Step3>
-        <Step4>Eigelbe, Zucker und Vanillezucker verrühren.</Step4>
-        <Step5>Geschmolzene Butter-Schokomasse hinzufügen und mischen.</Step5>
-        <Step6>Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben.</Step6>
-        <Step7>In eine gut gefettete Form geben.</Step7>
-        <Step8>Bei 180°Grad 40 – 50 Minuten backen.</Step8>    
+        <Step id_step="0">Butter und Schokolade im Wasserbad schmelzen.</Step>
+        <Step id="1">Eier trennen.</Step>
+        <Step>Eiweiß steif schlagen.</Step>
+        <Step>Eigelbe, Zucker und Vanillezucker verrühren.</Step>
+        <Step>Geschmolzene Butter-Schokomasse hinzufügen und mischen.</Step>
+        <Step>Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben.</Step>
+        <Step>In eine gut gefettete Form geben.</Step>
+        <Step>Bei 180°Grad 40 – 50 Minuten backen.</Step>    
     </Zubereitung>
     
     <Brennwert>295 kcal</Brennwert>
