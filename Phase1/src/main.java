@@ -156,8 +156,14 @@ public class main {
 		//Einfügen in die XML
 		Marshaller marshaller = jc.createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		marshaller.marshal(rs, (new File("src/3d.xml")));
+		marshaller.marshal(rs, (new File("src/generated_laura/3d.xml")));
 		
-
+//
+//		//Jetzt wieder Marshallen
+//        Marshaller marshaller = jc.createMarshaller();
+//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//
+//        //Output: Aufgabe3d.xml, 'System.out' fŸr manual-Debugging verwenden
+//        marshaller.marshal(rs, new File("Aufgabe 4/aufgabe4_src/Aufgabe3d.xml"));
 	}
 }
